@@ -1,10 +1,13 @@
 package org.example;
+
 import processing.core.PApplet;
 
 class BouncyBall {
     PApplet p;
     float x,y;
-    float xspeed, yspeed;
+    float xspeed = 10.5f;
+    float yspeed = 10.0f;
+
 
     //Constructor
     BouncyBall(PApplet p, float x, float y) {
@@ -14,8 +17,6 @@ class BouncyBall {
     }
 
     void display() {
-        xspeed = 2.5f;
-        yspeed = 2.0f;
         x += xspeed;
         y += yspeed;
         if (x > p.width || x < 0) {
@@ -50,7 +51,7 @@ public class Main extends PApplet{
 
     }
 
-    static void main() {
-        PApplet.main("Main");
+    public static void main(String[] args) {
+        PApplet.main(Main.class);
         }
 }
